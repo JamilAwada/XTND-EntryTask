@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,29 @@
     <link href="styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Simple Form</title>
-    
+    <script>
+        $(document).ready(function(){
+          $("form").submit(function(event) {
+            event.preventDefault();
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var amount = $("#amount").val();
+            var submit = $("#submit").val();
+            $.post("/validator.php", {
+              name:name,
+              email:email,
+              amount:amount,
+            }, function(data, status) {
+              console.log(data)
+              var obj = jQuery.parseJSON(data);
+              console.log(obj.name)
+              $("#nameOutput").html(obj.name);
+              $("#emailOutput").html(obj.email);
+              $("#amountOutput").html(obj.amount);
+            })
+          });
+        })
+        </script>
 </head>
 
 <body>
@@ -61,7 +84,6 @@
                     <div class="col-5 pe-5 ps-4">
                         <button type="submit" class="btn" style="color: white; background-color: #1D1C52;" id="submitButton">Submit</button>
                     </div>
-
                     </div>                  
                   </form>
                   <p id="form-message"></p>
@@ -73,18 +95,16 @@
             </div>
         </footer>
         <div class="popup text-center">
-            <h3 class="mt-3">Thank you!</h3>
-            <p class="mt-3 max-width: 80%">Our team will get back to you shortly. In the meantime, please make sure to regularly check your inbox (and spam folder).</p>
-            <img src="checkmark-xxl.png" height="30%" width="30%" class="my-2" id="checkmark">
+            <h3 class="mt-2">Thank you!</h3>
+            <p class="mt-2 max-width: 80%">Our team will get back to you shortly. In the meantime, please make sure to regularly check your inbox (and spam folder).</p>
             <div>Your name:</div>
-            <p id="name2"></p><br>
+            <p id="nameOutput"></p><br>
             <div>Your email:</div>
-            <p id="email2"></p><br>
+            <p id="emailOutput"></p><br>
             <div>Your amount:</div>
-            <p id="amount2"></p><br>
-            </div>
-      
-        
+            <p id="amountOutput"></p><br>
+            <img src="checkmark-xxl.png" height="10%" width="10%" class="mb-2" id="checkmark">
+        </div>  
     <script src="app.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
