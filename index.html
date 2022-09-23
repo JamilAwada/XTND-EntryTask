@@ -22,9 +22,7 @@
               email:email,
               amount:amount,
             }, function(data, status) {
-              console.log(data)
               var obj = jQuery.parseJSON(data);
-              console.log(obj.name)
               $("#nameOutput").html(obj.name);
               $("#emailOutput").html(obj.email);
               $("#amountOutput").html(obj.amount);
