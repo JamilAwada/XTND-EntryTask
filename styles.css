@@ -4,32 +4,24 @@
   font-family: "Cairo", sans-serif;
 }
 
-.navbar-brand {
-  color: #1d1c52;
-}
-
-.logo {
-  width: 20%;
-  margin-left: 34em;
-}
-
-h2 {
-  color: #1d1c52;
-  margin-left: 19em;
-}
-
-.input-field {
-  margin-left: 10em;
-}
-
-.clear-btn {
-  margin-left: 1em;
-  margin-top: 0.3em;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
 }
 
 .clear-btn:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%; 
 }
 
 .popup {

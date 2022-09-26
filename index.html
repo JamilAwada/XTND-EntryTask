@@ -36,13 +36,15 @@
     <nav class="navbar navbar-light" style="background-color: #1D1C52;">
         <span class="navbar-brand ms-5 text-light">Company</span>
     </nav>
-        <img src="Company-1.png" width="20%" height="20%" class="logo">
-        <h2 style="color: #1D1C52; margin-left: 19em;">Let's talk!</h2>
-        <div class="row justify-content-center my-4">
+        <img src="Company-1.png" width="20%" height="20%" class="logo center">
+        <h2 style="color: #1D1C52;" align="center">Let's talk!</h2>
+        <div class="container">
+          <div class="row justify-content-center my-4">
             <div class="col-lg-6">
                 <form action="validation.php" method="POST" class="text-center" id="form">
                     <label for="name" class="form-label" style="color: #1D1C52; font-weight: bold;">Name</label>
-                    <div class="mb-4 w-50">
+                    <div class="row justify-content-center">
+                      <div class="mb-4 w-50">
                         <input
                           type="name"
                           id="name"
@@ -50,36 +52,43 @@
                           class="form-control input-field"
                           required
                         />
-         
+                    </div>
+                    
                       </div>
                       <label for="email" class="form-label" style="color: #1D1C52; font-weight: bold;">Email</label>
-                      <div class="mb-4 w-50">
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          class="form-control input-field"
-                          required
-                        />
-        
+                      <div class="row justify-content-center">
+                        <div class="mb-4 w-50">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control input-field"
+                            required
+                          />
+          
+                        </div>
                       </div>
+                      
                       <label for="amount" class="form-label" style="color: #1D1C52; font-weight: bold;">Amount</label>
-                      <div class="mb-4 w-50">
-                        <input
-                          type="number"
-                          id="amount"
-                          name="amount"
-                          class="form-control input-field"
-                          required
-                        />
+                      <div class="row justify-content-center">
+                        <div class="mb-4 w-50">
+                          <input
+                            type="number"
+                            id="amount"
+                            name="amount"
+                            class="form-control input-field"
+                            required
+                          />
+                        </div>
                       </div>
+                      
         
                     <div class="container text-center">
-                    <div class="row gx-0">
-                    <div class="col-6 ps-5">
+                    <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6 col-xs-12 pe-5 ps-5 my-sm-3 my-xs-3">
                         <div class="clear-btn text-muted" id="clearButton">Clear fields</div>
                     </div>
-                    <div class="col-5 pe-5 ps-4">
+                    <div class="col-lg-6 col-xs-12 pe-5 ps-5 my-sm-3 my-xs-3">
                         <button type="submit" class="btn" style="color: white; background-color: #1D1C52;" id="submitButton">Submit</button>
                     </div>
                     </div>                  
@@ -87,7 +96,9 @@
                   <p id="form-message"></p>
             </div>
         </div>
-        <footer class="footer mt-4 py-3" style="background-color: #1D1C52;">
+        </div>
+
+        <footer class="footer pb-3" style="background-color: #1D1C52;">
             <div class="container">
               <span class="text-muted">Copyright <a href="https://github.com/JamilAwada">Jamil Awada</a></span>
             </div>
