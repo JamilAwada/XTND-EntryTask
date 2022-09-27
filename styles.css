@@ -11,6 +11,23 @@
   width: 15%;
 }
 
+.blue-bg {
+  background-color: #1d1c52;
+}
+
+.white-fg {
+  color: white;
+}
+
+.blue-fg {
+  color: #1d1c52;
+}
+
+.label-style {
+  color: #1d1c52;
+  font-weight: bold;
+}
+
 .clear-btn:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -24,7 +41,7 @@ footer {
     width: 100%; 
 }
 
-.popup {
+/* .popup {
   width: 300px;
   height: 488px;
   border-radius: 10px;
@@ -40,4 +57,5 @@ footer {
 
 .open-popup {
   visibility: visible;
-}
+} */
+
